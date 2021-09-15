@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CIAM应用"/>
+    <meta name="keywords" content="express,express.js,CIAM"/>
+    <title>CIAM - Express.js</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style lang="css">
+      h1 {
+        text-align: center;
+        width: 600px;
+        margin: 300px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ciam-login">
+      用户当前状态：<%= isLogin ? '已登录' : '未登录' %>
+      <% if (!isLogin) { %>
+        <a href="/login">登录</a>
+      <% } else { %>
+        <a href="/logout">退出</a>
+        <div>
+          <a href="/userinfo">查看用户信息</a>
+        </div>
+      <% } %>
+    </div>
+  </body>
+</html>
